@@ -1,9 +1,18 @@
-import React from 'react'
+import Link from "next/link";
 
-const Logo = () => {
+interface Props{
+  title?: string;
+  className?: string;
+}
+
+function Logo({ title, className }: Props)
+{
   return (
-    <div>Logo</div>
+    <Link href={"/"}>
+      <h1 className={`text-3xl font-extrabold uppercase ${className}`}>{title}</h1>
+    </Link>
+    
   )
 }
 
-export default Logo
+export default Logo;
